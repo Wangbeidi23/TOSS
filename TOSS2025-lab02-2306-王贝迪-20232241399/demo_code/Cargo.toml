@@ -1,0 +1,28 @@
+[package]
+name = "rustDemo"
+version = "0.1.0"
+edition = "2024"
+
+
+
+
+[dependencies]
+eframe = { version = "0.22.0", features = ["persistence"] }
+egui = { version = "0.22.0", features = ["serde"] }
+winapi = { version = "0.3.9", features = ["winuser"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+
+[package.metadata.bundle]
+name = "Graph Algorithm Visualization"
+icon = ["icons/icon.png"]  # 准备 256x256 PNG 图标
+identifier = "com.example.graph-algo"
+version = "0.1.0"
+
+# Windows 平台特定配置
+[package.metadata.bundle.windows]
+console = false
+manufacturer = "Example Corp"
