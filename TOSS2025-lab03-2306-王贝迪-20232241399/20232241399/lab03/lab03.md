@@ -117,7 +117,7 @@
 
 linux下安装rust
 
-![image-20250523182946724](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523182946724.png)
+![image-20250523182946724](lab03.assets/image-20250523182946724.png)
 
 
 
@@ -434,13 +434,13 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
         *   `child.wait()`：在所有子进程启动后，逐个等待它们完成。这是确保管道正确执行顺序的关键。
         *   **错误处理**: 使用 `match` 捕获 `spawn()` 可能产生的 `io::Error`，特别是 `ErrorKind::NotFound` 来提示“command not found”。
 
-![image-20250523191120471](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523191120471.png)
+![image-20250523191120471](lab03.assets/image-20250523191120471.png)
 
-![image-20250523191259835](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523191259835.png)
+![image-20250523191259835](lab03.assets/image-20250523191259835.png)
 
 **在ubuntu 系统 vim编辑器中代码**
 
-![image-20250523192030146](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523192030146.png)
+![image-20250523192030146](lab03.assets/image-20250523192030146.png)
 
 **第一次编译错误，Gemini修复代码**
 
@@ -734,7 +734,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
 * **预期输出**: 列出当前目录的详细信息。
 
-![image-20250523202644163](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523202644163.png)
+![image-20250523202644163](lab03.assets/image-20250523202644163.png)
 
 
 
@@ -756,7 +756,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
   （注意："Hello World" 被作为一个整体参数传递给 `echo`）
 
-![image-20250523202742833](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523202742833.png)
+![image-20250523202742833](lab03.assets/image-20250523202742833-17480050812282.png)
 
 * **命令**: `echo 'Single quote test'`
 
@@ -772,7 +772,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
   Single quote test
   ```
 
-  ![image-20250523202827253](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523202827253.png)
+  ![image-20250523202827253](lab03.assets/image-20250523202827253.png)
 
   
 
@@ -790,7 +790,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
   Escaped double quote: " and escaped backslash: \
   ```
 
-![image-20250523203131055](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523203131055.png)
+![image-20250523203131055](lab03.assets/image-20250523203131055.png)
 
 不符合，代码逻辑可能有错
 
@@ -810,7 +810,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
 * **预期输出**: `pwd` 命令显示当前目录已改变。
 
-![image-20250523203404033](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523203404033.png)
+![image-20250523203404033](lab03.assets/image-20250523203404033.png)
 
 * **命令**: `cd /tmp`
 
@@ -827,7 +827,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
   /tmp
   ```
 
-  ![image-20250523203507863](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523203507863.png)cd
+  ![image-20250523203507863](lab03.assets/image-20250523203507863.png)
 
 * **命令**: `cd` (不带参数)
 
@@ -840,7 +840,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
 * **预期输出**: 返回到用户的主目录 (`$HOME`)。
 
-  ![image-20250523203601888](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523203601888.png)
+  ![image-20250523203601888](lab03.assets/image-20250523203601888.png)
 
 * **命令**: `cd nonexistent_dir`
 
@@ -856,7 +856,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
   cd: no such file or directory: nonexistent_dir
   ```
 
-![image-20250523203637165](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523203637165.png)
+![image-20250523203637165](lab03.assets/image-20250523203637165.png)
 
 
 
@@ -877,7 +877,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
   shell: command execution failed: No such file or directory (os error 2)
   ```
 
-  ![image-20250523203734701](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523203734701.png)
+  ![image-20250523203734701](lab03.assets/image-20250523203734701.png)
 
   
 
@@ -897,7 +897,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
   shell: parse error: Unmatched quote in argument
   ```
 
-![image-20250523203805870](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523203805870.png)
+![image-20250523203805870](lab03.assets/image-20250523203805870.png)
 
 
 
@@ -917,7 +917,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
   -rw-r--r-- 1 user user 5.0K Jan  1 10:00 src/main.rs
   ```
 
-  ![image-20250523204341227](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523204341227.png)
+  ![image-20250523204341227](lab03.assets/image-20250523204341227.png)
 
 * **命令**: `echo "one two three" | wc -w`
 
@@ -935,7 +935,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
   （`echo` 的输出作为 `wc -w` 的输入，计算单词数）
 
-  ![image-20250523204427535](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523204427535.png)
+  ![image-20250523204427535](lab03.assets/image-20250523204427535.png)
 
 * **多级管道**: `cat src/main.rs | head -n 10 | tail -n 5`
 
@@ -947,7 +947,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
 * **预期输出**: 显示 `src/main.rs` 文件的前10行中的最后5行。
 
-![image-20250523204718478](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523204718478.png) 
+![image-20250523204718478](lab03.assets/image-20250523204718478.png) 
 
 ### 6.6 退出 Shell
 
@@ -961,7 +961,7 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
 * **预期输出**: Shell 程序终止。
 
-![image-20250523204805903](C:\Users\W\AppData\Roaming\Typora\typora-user-images\image-20250523204805903.png)
+![image-20250523204805903](lab03.assets/image-20250523204805903.png)
 
 * **Ctrl+D (EOF)**
 
@@ -976,6 +976,18 @@ fn execute_command_pipeline(pipeline: Vec<Vec<String>>) -> io::Result<()> {
 
   Shell 程序终止。
 
+## 7. 结论与未来工作
 
+### 7.1 结论
+
+本次实验成功地使用 Rust 语言从零实现了一个简化的命令行解释器。我们实现了：
+
+*   基本的“读-解析-执行”循环。
+*   支持带引号参数的复杂命令行解析。
+*   内置命令 `cd` 和 `exit` 的实现。
+*   健壮的错误处理机制，能够识别命令不存在、路径错误和语法错误等问题。
+*   以及关键的，对 Unix 风格命令管道机制（`|`）的支持，实现了命令间的输入输出重定向。
+
+通过这次实践，我们深入理解了 Shell 的基本原理，熟悉了 Rust 在文件 I/O、进程管理（`std::process::Command`）、字符串处理和错误处理方面的强大功能。Rust 的所有权系统和 `Result` 类型在编写并发和健壮的系统级程序时提供了极大的帮助，确保了程序的内存安全和线程安全。
 
 ---
