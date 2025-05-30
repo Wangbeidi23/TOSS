@@ -486,21 +486,19 @@ async fn main() -> anyhow::Result<()> {
 
 1.  **第一次运行 (模型下载)**:
     当首次运行 `cargo run` 或执行 `remember` 或 `ask` 命令时，程序会尝试从 Hugging Face Hub 下载嵌入模型和 LLM 模型。这可能需要一些时间，具体取决于您的网络速度。模型文件通常会缓存到 `~/.cache/huggingface/hub` 目录。
-    
     ```bash
     cargo run -- remember "Rust is a powerful systems programming language focused on safety, performance, and concurrency."
     ```
     第一次执行 `remember` 命令时，会下载 `bge-small-en-v1.5` 嵌入模型。
-    
+
 2.  **存储知识**:
     继续使用 `remember` 命令向本地知识库添加内容。
-    
     ```bash
     cargo run -- remember "Cargo is Rust's package manager and build system."
     cargo run -- remember "Tokio is a runtime for writing asynchronous applications with the Rust programming language."
     ```
     您可以在项目目录下找到一个 `db` 文件夹，其中包含了 `SurrealDB` 存储的数据。
-    
+
 3.  **提问**:
     使用 `ask` 命令向 Chacha 提问。
     ```bash
